@@ -5,7 +5,7 @@ body {
 	color: white;
 	max-width: 800px;
 	margin: 1em auto;
-	background-image: url('background.png');
+	background-image: url('images/background.png');
 	background-position: top center;
 	background-repeat: no-repeat;
 }
@@ -102,9 +102,41 @@ button {
 
 button:hover {
 	background: #2193c9;
+    cursor: pointer;
 }
 
+.social {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+}
 
+.social button {
+  margin: 0 20px;
+  flex: 1;
+  display: flex;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.social button.facebook {
+  background: #3b5999;
+}
+
+.social button.twitter {
+  background: #4099ff;
+}
+
+.social button img {
+  max-width: 50px;
+  display: inline-block;
+  flex: 1;
+}
+
+.social button span {
+  line-height: 50px;
+  flex: 2;
+}
 
 .gradient{
 	  background: -webkit-linear-gradient(#19c3e8, #1989e8);
