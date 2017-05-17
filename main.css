@@ -28,7 +28,6 @@ h2 {
 h3 {
 	color: #27d9ff;
 	font-size: 2em;
-	line-height: 0.2;
 }
 
 .more-info {
@@ -191,4 +190,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
 	width: 500px;
 	padding: 15px;
 	margin-top: 2px;
+}
+
+form main {
+  margin: 3em 0;
+  display: flex;
+}
+
+form main input, form main button {
+  margin: 0 10px;
+  flex: 1;
+}
+
+form main input[name="member[first_name]"], form main input[type="email"] {
+  flex-grow: 2;
+}
+
+form footer {
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.disclaimer {
+  font-size: 0.8em;
+  line-height: 1.4em;
 }
