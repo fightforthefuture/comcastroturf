@@ -95,7 +95,7 @@ button {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1.5em;
-	width: 500px;
+	width: 80%;
 	padding: 15px;
 	margin-top: 2px;
 }
@@ -146,6 +146,7 @@ button:hover {
 
 form{
 	padding: 0 78px;
+	width: 80%;
 }
 
 .then{
@@ -191,3 +192,77 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
 	padding: 15px;
 	margin-top: 2px;
 }
+
+
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+
+.button{
+	width: 100%;
+}
+ form{
+ 	width: 100%;
+ 	padding: 0;
+ }
+
+  h1{
+ 	font-size: 2em;
+ }
+
+ h2{
+ 	font-size: 1.2em;
+ }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+	.button{
+	width: 100%;
+}
+ form{
+ 	width: 100%;
+ 	padding: 0;
+ }
+  h1{
+ 	font-size: 3em;
+ }
+  h2{
+ 	font-size: 1.2em;
+ }
+
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+.button{
+	width: 100%;
+}
+ form{
+ 	width: 100%;
+ 	padding: 0;
+ }
+
+  h2{
+ 	font-size: 1.7em;
+ }
+
+
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+ h1{
+ 	font-size: 4em;
+ }
+
+  h2{
+ 	font-size: 1.7em;
+ }
+} 
+
+
