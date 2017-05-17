@@ -10,6 +10,13 @@ body {
 	background-repeat: no-repeat;
 }
 
+button, input{
+	box-sizing: border-box;
+	display: block;
+
+}
+
+
 
 h1 {
 	color: #279CFF;
@@ -47,6 +54,7 @@ section {
 
 footer {
 	padding: 5em;
+	margin-top: 20px;
 }
 
 .search {
@@ -109,6 +117,7 @@ button:hover {
   max-width: 500px;
   margin: 0 auto;
   display: flex;
+  margin-top: 20px;
 }
 
 .social button {
@@ -195,11 +204,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
 
 
 
+
+
 /* SMARTPHONES PORTRAIT */
 @media only screen and (min-width: 300px) {
 
 .button{
 	width: 100%;
+	font-size: 1.2em;
 }
  form{
  	width: 100%;
@@ -213,6 +225,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
  h2{
  	font-size: 1.2em;
  }
+  .search{
+ 	margin:5px;
+ }
+
+ footer{
+ 	padding: 0;
+ }
+
+
 
 }
 
@@ -220,6 +241,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
 @media only screen and (min-width: 480px) {
 	.button{
 	width: 100%;
+	font-size: 1.2em;
 }
  form{
  	width: 100%;
@@ -232,6 +254,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
  	font-size: 1.2em;
  }
 
+ .search{
+ 	margin:5px;
+ }
+
 
 }
 
@@ -239,10 +265,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
 @media only screen and (min-width: 768px) {
 .button{
 	width: 100%;
+	font-size: 1.2em;
 }
  form{
  	width: 100%;
  	padding: 0;
+ }
+
+  h1{
+ 	font-size: 4em;
  }
 
   h2{
@@ -250,11 +281,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
  }
 
 
+
+
 }
 
 
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 1024px) {
+	.button{
+	width: 100%;
+	font-size: 1.5em;
+}
 
  h1{
  	font-size: 4em;
@@ -264,5 +301,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585594', end
  	font-size: 1.7em;
  }
 } 
+
 
 
