@@ -120,8 +120,11 @@
       </section>
     </section>
 
-    <!-- Free Progress A/B testing -->
-    <script src="https://fftf.io/js/client.js" type="text/javascript"></script>
+    <!-- Senty Error Reporting -->
+    <script src="https://cdn.ravenjs.com/3.15.0/raven.min.js"></script>
+    <script type="text/javascript">
+      if (typeof Raven !== 'undefined') Raven.config('https://08a03866fe184d778c454f554d296da9@sentry.io/169717').install();
+    </script>
 
     <script type="text/javascript">
       (function() {
@@ -172,5 +175,8 @@
         });
       })();
     </script>
+
+    <!-- Free Progress A/B testing -->
+    <script src="https://fftf.io/js/client.js" type="text/javascript"></script>
   </body>
 </html>
