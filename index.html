@@ -40,30 +40,33 @@
 
         <script type="text/javascript">
           (function() {
-            var form = document.querySelector('.search form');
-
             // Support case-insensitive name searches
-            form.addEventListener('submit', function(e) {
-              e.preventDefault();
+            // TODO: IE is missing FormData.prototype.get, polyfill this later?
+			if (typeof FormData.prototype.get == 'function') {
+              var form = document.querySelector('.search form');
 
-              var formData = new FormData(form);
+              form.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-              var url = [
-                form.getAttribute('action'),
-                '?proceedings_name=',
-                formData.get('proceedings_name'),
-                '&q=',
-                'filers.name:(',
-                formData.get('filers_name'),
-                ')%20AND%20',
-                formData.get('q'),
-                '&sort=',
-                formData.get('sort')
-              ].join('');
+                var formData = new FormData(form);
 
-              window.open(url);
-            });
-          })()
+                var url = [
+                  form.getAttribute('action'),
+                  '?proceedings_name=',
+                  formData.get('proceedings_name'),
+                  '&q=',
+                  'filers.name:(',
+                  formData.get('filers_name'),
+                  ')%20AND%20',
+                  formData.get('q'),
+                  '&sort=',
+                  formData.get('sort')
+                ].join('');
+
+                window.open(url);
+              });
+			}
+          })();
         </script>
 
         <p class="then">Then</p>
