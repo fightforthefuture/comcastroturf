@@ -18,7 +18,7 @@
     <meta name="twitter:description" content="Pro-Comcast, anti-net neutrality forces seem to be submitting fake comments. Help us prove it, and stop them."/>
     <meta name="twitter:url" content="https://www.comcastroturf.com/"/>
 
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
 
@@ -37,37 +37,6 @@
           <input type="hidden" name="q" value="text_data:((((&quot;Dear &quot; OR &quot;To &quot; OR &quot;&quot;) AND (&quot;Chairman Pai&quot; OR &quot;Mr Pai&quot;) AND (&quot;, &quot; OR &quot;: &quot;) OR &quot;&quot;) AND &quot;I&quot; AND (&quot;would like to comment on&quot; OR &quot;have concerns about&quot; OR &quot;am a voter worried about&quot; OR &quot;concerned about&quot;) AND (&quot;net neutrality&quot; OR &quot;Network Neutrality&quot; OR &quot;Internet regulation&quot; OR &quot;the FCC rules on the Internet&quot;) AND &quot;I&quot; AND (&quot;urge&quot; OR &quot;encourage&quot; OR &quot;ask&quot; OR &quot;recommend&quot; OR &quot;request&quot; OR &quot;advocate&quot;) AND (&quot;the commission&quot; OR &quot;the commissioners&quot; OR &quot;Ajit Pai&quot; OR &quot;government&quot;) AND &quot;to&quot; AND (&quot;reverse&quot; OR &quot;repeal&quot; OR &quot;undo&quot;)) OR &quot;The unprecedented regulatory power&quot;)" />
           <input type="hidden" name="sort" value="date_disseminated,DESC" />
         </form>
-
-        <script type="text/javascript">
-          (function() {
-            // Support case-insensitive name searches
-            // TODO: IE is missing FormData.prototype.get, polyfill this later?
-			if (typeof FormData.prototype.get == 'function') {
-              var form = document.querySelector('.search form');
-
-              form.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                var formData = new FormData(form);
-
-                var url = [
-                  form.getAttribute('action'),
-                  '?proceedings_name=',
-                  formData.get('proceedings_name'),
-                  '&q=',
-                  'filers.name:(',
-                  formData.get('filers_name'),
-                  ')%20AND%20',
-                  formData.get('q'),
-                  '&sort=',
-                  formData.get('sort')
-                ].join('');
-
-                window.open(url);
-              });
-			}
-          })();
-        </script>
 
         <p class="then">Then</p>
         <button class="second" id="ag-button">Contact Attorney General</button>
@@ -183,70 +152,13 @@
       if (typeof Raven !== 'undefined') Raven.config('https://08a03866fe184d778c454f554d296da9@sentry.io/169717').install();
     </script>
 
-    <script type="text/javascript">
-      (function() {
-        var gutter = document.querySelector('.gutter');
-
-        function openModal(id) {
-          // Remove any existing modal content
-          while (gutter.firstChild) {
-            gutter.removeChild(gutter.firstChild);
-          }
-
-          var modal = document.getElementById(id).cloneNode(true);
-          modal.classList.remove('hidden');
-
-          modal.querySelector('.close').addEventListener('click', function(e) {
-            e.preventDefault();
-            gutter.classList.add('hidden');
-          });
-
-          gutter.appendChild(modal);
-          gutter.classList.remove('hidden');
-
-          return modal;
-        }
-
-        function closeModal() {
-          gutter.classList.add('hidden');
-        }
-
-        // Open modal from button
-        document.getElementById('ag-button').addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          var modal = openModal('ag');
-          var form = modal.querySelector('form');
-            
-          // Display after-action thanks content
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            var xhr = new XMLHttpRequest();
-            var formData = new FormData(form);
-
-            xhr.open(form.getAttribute('method'), form.getAttribute('action'), true);
-
-            xhr.addEventListener('load', function() {
-              openModal('thanks');
-            });
-
-            xhr.send(formData);
-          });
-        });
-
-        // Close any modal on escape keyup event
-        document.addEventListener('keyup', function(e) {
-          if (e.keyCode === 27) closeModal()
-        });
-      })();
-    </script>
+    <script src="js/main.js" type="text/javascript"></script>
 
     <!-- Free Progress A/B testing -->
     <script src="https://fftf.io/js/client.js" type="text/javascript"></script>
 
     <!-- Google Analytics -->
-    <script>
+    <script type="text/javascript">
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 	  ga('create', 'UA-26576645-30', 'auto');
