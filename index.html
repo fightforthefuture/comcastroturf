@@ -39,7 +39,10 @@
         </form>
 
         <p class="then">Then</p>
-        <button class="second" id="ag-button">Contact Attorney General</button>
+
+        <a href="https://www.battleforthenet.com" target="_blank">
+		  <button class="second">Submit a real comment to the FCC</button>
+		</a>
       </section>
 
       <section class="social">
@@ -89,62 +92,6 @@
     <footer>
       <a href="https://fftfef.org"><img src="images/fftfef.png"></a>
     </footer>
-
-    <section class="gutter hidden"></section>
-
-    <section class="modal hidden" id="ag">
-      <a class="close" href="#">x</a>
-      <header>
-        <h3>Tell your Attorney General to start an official investigation</h3>
-        <p>Someone is committing fraud in an attempt to influence the FCC's decision on a critical issue. If the agency has any legitimacy, it cannot move forward with its plans until this matter is resolved. State Attorney Generals have the power to get the proof we need to find out who did this and bring real pressure and hold them accountable. Sign the petition asking your Attorney General to investigate this, and demanding that the FCC reveal any information that they have about who is doing this.</p>
-      </header>
-      <main>
-        <form method="post" action="https://queue.fightforthefuture.org/action" accept-charset="UTF-8">
-          <section>
-            <input type="text" name="member[first_name]" placeholder="Full Name" title="Full Name" autocomplete="name" required>
-            <input type="email" name="member[email]" placeholder="Email" title="Email" required>
-            <input type="text" name="member[postcode]" placeholder="ZIP" title="ZIP" required size="5" pattern="[0-9]{5}">
-          </section>
-          <button type="submit">Sign</button>
-
-          <!-- Mothership Honeypot Bot Defense -->
-          <input class="hidden" type="checkbox" checked="checked" name="hp_enabled" />
-          <input class="hidden" type="checkbox" name="hp_disabled" />
-          <input class="hidden" type="text" name="guard" />
-
-          <!-- Mothership -->
-          <input type="hidden" name="org" value="fftf"/>
-
-          <!-- Action Network -->
-          <input type="hidden" name="an_tags" value="[&quot;net-neutrality&quot;]"/>
-          <input type="hidden" name="an_petition_id" value="4608f8b5-f704-4497-b9b6-da1ddedff113"/>
-        </form>
-      </main>
-      <footer>
-        <p class="disclaimer"><a href="https://www.fightforthefuture.org/" target="_blank">Fight for the Future</a> will contact you about future campaigns. <a href="https://www.fightforthefuture.org/privacy/" target="_blank">Privacy Policy</a></p>
-      </footer>
-    </section>
-
-    <section class="modal hidden" id="thanks">
-      <a class="close" href="#">x</a>
-      <header>
-        <h3>Thanks for signing!</h3>
-      </header>
-      <main>
-        <p>Thanks for signing the petition demanding state attorneys general investigate this alleged anti-net neutrality fraud at the FCC.</p>
-        <p>Now, we need as many people as possible to do the same, too. Will you share this with your friends?</p>
-      </main>
-      <footer class="social">
-        <button class="facebook">
-          <img src="images/facebook.svg" alt="Facebook" />
-          <span>Share on Facebook</span>
-        </button>
-        <button class="twitter">
-          <img src="images/twitter.svg" alt="Twitter" />
-          <span>Share on Twitter</span>
-        </button>
-      </footer>
-    </section>
 
     <!-- Senty Error Reporting -->
     <script src="https://cdn.ravenjs.com/3.15.0/raven.min.js"></script>
