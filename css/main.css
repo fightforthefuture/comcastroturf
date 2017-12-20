@@ -84,6 +84,11 @@ footer {
   padding: 4em 2em;
 }
 
+.pledge {
+  font-weight: lighter;
+  font-style: italic;
+}
+
 .search input, .search button {
   width: 100%;
 }
